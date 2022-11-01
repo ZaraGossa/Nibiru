@@ -5,7 +5,7 @@ for (( ;; )); do
 	echo -e "\033[0;32mWaiting 30 seconds before requesting balance\033[0m"
 	sleep 30
 	AMOUNT=$(nibid query bank balances nibi12g8jq978y8zza5x99a6k7aqvttat77wm876wgp | grep amount | awk '{split($0,a,"\""); print a[2]}')
-	AMOUNT=$(($AMOUNT"unibi" - 500))
+	AMOUNT=$(($AMOUNT < 20000000))
 	AMOUNT_STRING=$AMOUNT"unibi"
 	echo -e "Your total balance: \033[0;32m$AMOUNT_STRING\033[0m"
 	 nibid tx staking delegate nibivaloper12g8jq978y8zza5x99a6k7aqvttat77wmw954uu $AMOUNT_STRING --from Zaragossa --chain-id $NIBIRU_CHAIN_ID --fees=250unibi --yes
