@@ -9,6 +9,6 @@ for (( ;; )); do
 	AMOUNT_STRING=$AMOUNT"unibi"
 	echo -e "Your total balance: \033[0;32m$AMOUNT_STRING\033[0m"
 	 nibid tx staking delegate nibivaloper12g8jq978y8zza5x99a6k7aqvttat77wmw954uu $AMOUNT_STRING --from Zaragossa --chain-id $NIBIRU_CHAIN_ID --fees=250unibi --yes
-	echo -e "\033[0;32m$AMOUNT_STRING staked! Restarting in 3600 sec!\033[0m"
+	echo -e "\033[0;32m$AMOUNT_STRING staked! Restarting in 300 sec!\033[0m"
 	sleep 300
 done
